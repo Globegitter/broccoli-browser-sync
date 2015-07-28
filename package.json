@@ -1,0 +1,35 @@
+{
+  "name": "broccoli-browser-sync",
+  "version": "1.0.0",
+  "description": "BrowserSync for Broccolijs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Globegitter/broccoli-browser-sync.git"
+  },
+  "keywords": [
+    "broccoli",
+    "broccoli-plugin",
+    "browser-sync",
+    "browsersync",
+    "css-injection",
+    "livereload"
+  ],
+  "author": "Markus Padourek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Globegitter/broccoli-browser-sync/issues"
+  },
+  "homepage": "https://github.com/Globegitter/broccoli-browser-sync#readme",
+  "dependencies": {
+    "broccoli-caching-writer": "git+https://github.com/Globegitter/broccoli-caching-writer.git#patch-1",
+    "browser-sync": "^2.8.0",
+    "glob": "^5.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^1.0.0-rc-3"
+  }
+}
