@@ -9,7 +9,7 @@ function BrowserSyncWatcher(inputTrees, options) {
     return new BrowserSyncWatcher(inputTrees, options);
   }
 
-  // the options should override that in the CachingWrite if passed
+  // the options should override that in the CachingWrite if passed through option
   this.onlyReturnUpdatedTrees = true;
 
   CachingWriter.call(this, inputTrees, options);
@@ -18,10 +18,11 @@ function BrowserSyncWatcher(inputTrees, options) {
   this.options = options;
   this.port = (options.port > 0 ? options.port : 4200 );
   this.bsInstance = bs.create();
+  
+  bsOptions = options.browserSync || {};
+  bsOptions.proxy = 'http://localhost:' + this.port
 
-  this.bsInstance.init({
-    proxy: 'http://localhost:' + this.port
-  });
+  this.bsInstance.init(bsOptions);
 
   this.reload = function (files) {
     this.bsInstance.reload(files);
