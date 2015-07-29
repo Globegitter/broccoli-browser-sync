@@ -6,10 +6,19 @@ BrowserSync support for Broccolijs
 Right now usage is still a bit suboptimal, but you already get all the beauty of BrowserSync including live css injection as well as livereload.
 
 ```js
-var browserSync = new BrowserSync(inputTrees);
+var browserSync = new BrowserSync(inputTrees, options);
 ```
 
-e.g.
+to pass in any browsersync options:
+```js
+var options = {
+  browserSync: {
+    browser: 'Firefox'
+  }
+}
+```
+
+A fairl complex example:
 ```js
 var fastBrowserify = require('broccoli-fast-browserify');
 var babelify = require('babelify');
