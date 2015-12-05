@@ -1,14 +1,14 @@
 {
   "name": "broccoli-browser-sync",
-  "version": "1.0.0",
-  "description": "BrowserSync for Broccolijs",
+  "version": "1.0.1",
+  "description": "BrowserSync for Broccoli.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Globegitter/broccoli-browser-sync.git"
+    "url": "git+https://github.com/mlaccetti/broccoli-browser-sync.git"
   },
   "keywords": [
     "broccoli",
@@ -19,17 +19,20 @@
     "livereload"
   ],
   "author": "Markus Padourek",
+  "contributors": [
+    "Michael Laccetti <michael@laccetti.com> (https://laccetti.com/)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Globegitter/broccoli-browser-sync/issues"
+    "url": "https://github.com/mlaccetti/broccoli-browser-sync/issues"
   },
-  "homepage": "https://github.com/Globegitter/broccoli-browser-sync#readme",
+  "homepage": "https://github.com/mlaccetti/broccoli-browser-sync#readme",
   "dependencies": {
     "broccoli-caching-writer": "git+https://github.com/Globegitter/broccoli-caching-writer.git#patch-1",
-    "browser-sync": "^2.8.0",
-    "glob": "^5.0.14"
+    "browser-sync": "^2.10.0",
+    "glob": "^5.0.15"
   },
   "devDependencies": {
-    "eslint": "^1.0.0-rc-3"
+    "eslint": "^1.10.3"
   }
 }
