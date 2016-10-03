@@ -4,6 +4,7 @@
   "description": "BrowserSync for Broccoli.js",
   "main": "index.js",
   "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint.js index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,8 +35,5 @@
   },
   "devDependencies": {
     "eslint": "3.7.0"
-  },
-  "scripts": {
-    "lint": "node ./node_modules/eslint/bin/eslint.js index.js"
   }
 }
