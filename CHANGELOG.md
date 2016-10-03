@@ -1,5 +1,7 @@
 # Change Log
 
+## Changes since 2015-12-05T22:17:16.310Z
+
 ## [v1.0.0](https://github.com/globegitter/broccoli-browser-sync/tree/v1.0.0) (2015-07-28)
 **Merged pull requests:**
 

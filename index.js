@@ -18,9 +18,9 @@ function BrowserSyncWatcher(inputTrees, options) {
   this.options = options;
   this.port = (options.port > 0 ? options.port : 4200 );
   this.bsInstance = bs.create();
-  
-  bsOptions = options.browserSync || {};
-  bsOptions.proxy = 'http://localhost:' + this.port
+
+  var bsOptions = options.browserSync || {};
+  bsOptions.proxy = 'http://localhost:' + this.port;
 
   this.bsInstance.init(bsOptions);
 

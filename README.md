@@ -18,14 +18,16 @@ var options = {
 }
 ```
 
-A fairl complex example:
+A fairly complex example:
 ```js
 var fastBrowserify = require('broccoli-fast-browserify');
 var babelify = require('babelify');
 var mergeTrees = require('broccoli-merge-trees');
 var compileSass = require('broccoli-sass-source-maps');
 var funnel = require('broccoli-funnel');
+
 var BrowserSync = require('broccoli-browser-sync');
+var proxy = require('http-proxy-middleware');
 
 var optionalTransforms = [
   'regenerator'
@@ -59,7 +61,27 @@ var staticFiles = funnel('frontend', {
   srcDir: 'static'
 });
 
-var browserSync = new BrowserSync([staticFiles, transformedBabelify, appCss]);
+// browsersync options
+var bsOptions = {
+  browserSync: {
+    open: false,
+    middleware: [
+      proxy('/api/**', {
+        target: 'http://localhost:8080/',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }),
+      proxy('/live', {
+        target: 'http://localhost:8080/',
+        pathRewrite: {
+          '^/live': ''
+        },
+        ws: true})
+    ]
+  }
+};
+var browserSync = new BrowserSync([staticFiles, transformedBabelify, appCss], bsOptions);
 
 module.exports = mergeTrees([staticFiles, transformedBabelify, appCss, browserSync]);
 ```
