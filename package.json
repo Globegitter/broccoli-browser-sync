@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-browser-sync-ml",
+  "name": "broccoli-browser-sync",
   "version": "1.0.1",
   "description": "BrowserSync for Broccoli.js",
   "main": "index.js",
