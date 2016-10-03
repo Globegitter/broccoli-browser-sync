@@ -1,6 +1,6 @@
 {
   "name": "broccoli-browser-sync-ml",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "BrowserSync for Broccoli.js",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mlaccetti/broccoli-browser-sync.git"
+    "url": "git+https://github.com/Globegitter/broccoli-browser-sync.git"
   },
   "keywords": [
     "broccoli",
@@ -24,15 +24,18 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mlaccetti/broccoli-browser-sync/issues"
+    "url": "https://github.com/Globegitter/broccoli-browser-sync/issues"
   },
-  "homepage": "https://github.com/mlaccetti/broccoli-browser-sync#readme",
+  "homepage": "https://github.com/Globegitter/broccoli-browser-sync#readme",
   "dependencies": {
     "broccoli-caching-writer": "git+https://github.com/Globegitter/broccoli-caching-writer.git#patch-1",
-    "browser-sync": "^2.10.0",
-    "glob": "^5.0.15"
+    "browser-sync": "2.17.0",
+    "glob": "7.1.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "3.7.0"
+  },
+  "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint.js index.js"
   }
 }
