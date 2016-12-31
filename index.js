@@ -39,10 +39,10 @@ BrowserSyncWatcher.prototype.extensions = ['css'];
 // all the files that have been updated, or better: It returns all updated
 // files with given extensions if those are the only files that have been updated.
 // otherwise it will return an empty array.
-BrowserSyncWatcher.prototype.updateCache = function(srcPaths, destDir) {
+BrowserSyncWatcher.prototype.build = function() {
   var files = [];
-  for (var i = 0; i < srcPaths.length; i++) {
-    var tmpFiles = glob.sync(path.join(srcPaths[i], '/**/*'), { nodir: true });
+  for (var i = 0; i < this.inputPaths.length; i++) {
+    var tmpFiles = glob.sync(path.join(this.inputPaths[i], '/**/*'), { nodir: true });
     for (var j = 0; j < tmpFiles.length; j++) {
       var fileEnding = '.' + this.extensions[0];
       // if a filename does not end with the specified fileEnding then reload
