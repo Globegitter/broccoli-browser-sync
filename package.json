@@ -30,9 +30,9 @@
   },
   "homepage": "https://github.com/Globegitter/broccoli-browser-sync#readme",
   "dependencies": {
-    "broccoli-caching-writer": "^3.0.3",
-    "browser-sync": "^2.18.5",
-    "glob": "^7.1.1"
+    "broccoli-caching-writer": "3.0.3",
+    "browser-sync": "2.18.5",
+    "glob": "7.1.1"
   },
   "devDependencies": {
     "eslint": "3.7.0"
