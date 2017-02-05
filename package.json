@@ -1,7 +1,7 @@
 {
-  "name": "broccoli-browser-sync-bv",
+  "name": "broccoli-browser-sync",
   "version": "1.0.0",
-  "description": "BrowserSync for Broccoli.js - upgraded to the new plugin model",
+  "description": "BrowserSync for Broccoli.js",
   "main": "index.js",
   "scripts": {
     "lint": "node ./node_modules/eslint/bin/eslint.js index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bvellacott/broccoli-browser-sync.git"
+    "url": "git+https://github.com/Globegitter/broccoli-browser-sync.git"
   },
   "keywords": [
     "broccoli",
@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bvellacott/broccoli-browser-sync/issues"
+    "url": "https://github.com/Globegitter/broccoli-browser-sync/issues"
   },
-  "homepage": "https://github.com/bvellacott/broccoli-browser-sync#readme",
+  "homepage": "https://github.com/Globegitter/broccoli-browser-sync#readme",
   "dependencies": {
     "broccoli-caching-writer": "^3.0.3",
     "browser-sync": "^2.18.5",
